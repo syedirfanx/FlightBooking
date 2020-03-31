@@ -1,2 +1,2 @@
 # FlightBooking
-This is a website for booking flight online.
+* This is a website for booking flight online.

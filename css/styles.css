@@ -1,0 +1,232 @@
+@CHARSET "UTF-8";
+
+html, body{
+	background-image: url("../img/background.jpg");
+    background-repeat: no-repeat;
+    background-color: #e6e6e6;
+    background-size: cover;  
+    background-position: center;  
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    min-height: 100%;
+}
+
+#menubar-id{ 
+    margin-left: 0px;
+    text-align: center;
+    background-color: #581845;
+ 	margin: 0px;
+    height: 60px;
+    
+}
+
+.menubar-class{
+	background-color: #581845;
+	vertical-align: center;
+	
+	
+}
+
+.menubar-class li{
+    display: inline-block;
+    list-style-type: none;
+    padding: 10px;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.menubar-class li a{
+	color: white;
+	text-decoration: none;
+	font-size: 16px;
+	font-family: Verdana, arial, times;
+}
+
+#menu_logo{
+	height: 50px;
+	float:left;
+	margin-top: 3px;
+	margin-left: 25px;
+}
+
+.login{
+	text-align: right;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-right: 50px;
+	color: black;
+	font-family: Verdana, arial, times;
+	font-size: 16px;
+	text-transform: none;
+}
+
+.quick_book{
+	width: 440px;
+	height: 270px;
+	background-color: rgba(12,35,75,0.7);
+	display: inline-block;
+	text-transform: uppercase;
+	font-family: Verdana, arial, times;
+	border-radius: 28px;
+	font-size: 14px;
+	color: white;
+	padding: 25px;
+}
+
+#menubar_space{
+	padding: 5px;
+}
+
+#login_space{
+	padding: 30px;
+}
+
+#signup, #login, #search{
+	background-color:#2D319E;
+    border-radius: 28px;	
+    border: none;
+    color: white;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: Verdana, arial, times;
+}
+
+#signup{
+	margin-right: 20px;
+}
+
+#return_date, #depart_date{
+	width: 125px;
+	font-family: Verdana;
+}
+#origin_drop, #destination_drop{
+	width: 160px;
+	font-family: Verdana;
+}
+#passenger_num{
+	width: 30px;
+	font-family: Verdana;
+}
+#type_drop{
+	font-family: Verdana;
+}
+
+
+#from_block{
+	float: left;
+	text-align: left;
+	padding: 10px; 
+	margin-left: 30px;
+}
+
+#to_block{
+	float:left;
+	padding: 10px; 
+	text-align: left;
+	margin-left: 10px;
+}
+
+#depart_block{
+	float: left;
+	text-align: left;
+	padding: 15px; 
+	margin-left: 40px;
+	padding-top: 10px;
+	padding-bottom: 25px;
+}
+
+#return_block{
+	float:left;
+	padding: 15px; 
+	text-align: left;
+	margin-left: 20px;
+	padding-top: 10px;
+	padding-bottom: 25px;
+}
+
+#passenger_block{
+	float:left;
+	padding: 15px; 
+	text-align: left;
+	margin-left: 0px;
+	padding-top: 5px;
+	padding-bottom: 30px;
+}
+
+#trip_block{
+	float:left;
+	padding: 15px; 
+	text-align: left;
+	margin-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 20px;
+}
+
+#booking_header{
+	background-color: #9E2D2D;
+	border-radius: 40px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	-webkit-margin-before: 0em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+.search_result{
+	width: 950px;
+	height: 400px;
+	background-color: rgba(12,35,75,0.7);
+	display: inline-block;
+	text-transform: uppercase;
+	font-family: Verdana, arial, times;
+	font-size: 14px;
+	color: white;
+	padding: 25px;
+	border-radius:28px;
+}
+
+#search_head{
+	font-weight: bold;
+	padding-bottom: 40px;
+}
+
+
+#loginbg{
+    float:left;
+    padding: 10px; 
+    text-align: left;
+    margin-left: 5px;
+}
+
+
+#loginpg{
+    float:center;
+    border: none;
+    background-color: #98012E;
+    color: white;
+    padding: 10px 35px; 
+    text-align: center;
+    margin-left: 15px;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:#581845;
+  color: white;
+  text-align: center;
+  font-family: Verdana;
+}
+
+

@@ -2,7 +2,7 @@
 
 <table>
   <tr>
-    <td> Languge Uses </td>
+    <td> Language Uses </td>
     <td> HTML, CSS, php, MySql</td>
   </tr>
 </table>

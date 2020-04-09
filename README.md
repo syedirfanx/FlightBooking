@@ -35,4 +35,8 @@ The website is live in this link: https://sntl.netlify.com/
   
 </table>
 
+## Features
+
+### Navigation Bar
+<img src="img/navbar.png" border="1">
 

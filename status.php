@@ -42,7 +42,7 @@
             
             <ul>
                 <li><a href="index.php">Home</a></li>
-                <li><a href="status.html">Flight Status</a></li>
+                <li><a href="status.php">Flight Status</a></li>
                 <li><a href="reservation.html">Reservations</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
 				<li>

@@ -40,3 +40,22 @@ The website is live in this link: https://sntl.netlify.com/
 ### Navigation Bar
 <img src="img/navbar.png" border="1">
 
+<br />
+
+### User Login Page
+<img src="img/login.PNG" border="1">
+
+<br />
+
+### User Registration Page
+<img src="img/register.PNG" border="1">
+
+<br />
+
+### Search for Flights
+<img src="img/flightstatus.PNG" border="1">
+
+<br />
+
+### Book a Flight
+<img src="img/bookaflight.PNG" border="1">

@@ -9,7 +9,7 @@
 
 
 
-#### This is a simple website for booking flight online with the features described bellow. 
+#### A simple website for booking flight online with the features described bellow. 
 <table>
   <tr>
     <td> 1 </td>

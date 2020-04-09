@@ -31,6 +31,10 @@
     <td> 5 </td>
     <td> Book a Flight </td>
   </tr>
+  <tr>
+    <td> 6 </td>
+    <td> Reservations </td>
+  </tr>
   
 </table>
 

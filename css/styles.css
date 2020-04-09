@@ -51,20 +51,22 @@ html, body{
 	margin-left: 25px;
 }
 
-.login{
+login{
 	text-align: right;
-	padding-top: 10px;
+	padding-top: 0px;
 	padding-bottom: 10px;
 	margin-right: 50px;
-	color: black;
+	color: white;
 	font-family: Verdana, arial, times;
-	font-size: 16px;
+	font-size: 20px;
 	text-transform: none;
 }
 
+
+
 .quick_book{
 	width: 440px;
-	height: 270px;
+	height: 290px;
 	background-color: rgba(12,35,75,0.7);
 	display: inline-block;
 	text-transform: uppercase;

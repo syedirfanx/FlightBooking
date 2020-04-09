@@ -8,7 +8,6 @@
 </table>
 
 
-The website is live in this link: https://sntl.netlify.com/
 
 #### This is a simple website for booking flight online with the features described bellow. 
 <table>

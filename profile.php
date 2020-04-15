@@ -4,6 +4,7 @@
   if (!isset($_SESSION['username'])) {
   	$_SESSION['msg'] = "You must log in first";
   	header('location: login.php');
+	
   }
   
   if (isset($_GET['logout'])) {
@@ -11,13 +12,16 @@
   	unset($_SESSION['username']);
   	header("location: login.php");
   }
+  
+ 
+  
 ?>
 <!DOCTYPE html>
 <html >
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Home | SNTL Airlines</title>
+<title>Profile | SNTL Airlines</title>
 <link rel="icon" href="img/icon.png">
 <link href="styles.css" type="text/css" rel="stylesheet" />
 <link rel="stylesheet" href="css/styles.css">
@@ -56,9 +60,9 @@
        
         <div class="quick_book">
         	<h3 id="booking_header">Profile</h3>
-        	<a>User ID: <strong><?php echo $_SESSION['id']; ?></strong></a><br>
+			<a>USER ID: <strong><?php echo $_SESSION['id']; ?></strong></a><br>
 			<a>Name: <strong><?php echo $_SESSION['username']; ?></strong></a><br>
-			<a>Email: <strong><?php echo $_SESSION['email']; ?></strong></a>
+			<a>Email: <strong><?php echo $_SESSION['email']; ?></strong></a><br>	
 		</div>
         
         </div>

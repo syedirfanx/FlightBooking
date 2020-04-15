@@ -21,6 +21,10 @@ html, body{
     
 }
 
+#return_date, #depart_date{
+	width: 125px;
+	font-family: helvetica;
+}
 .menubar-class{
 	background-color: #581845;
 	vertical-align: center;

@@ -33,9 +33,9 @@
                 <li><a href="reservation.html">Reservations</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
 				<li>
-				<?php  if (isset($_SESSION['username'])) : ?>
-						<a>Welcome <strong><?php echo $_SESSION['username']; ?></strong></a>
-						 <a href="index.php?logout='1'" style="color: #fe28a2;"> Logout</a>
+					<?php  if (isset($_SESSION['username'])) : ?>
+						<a>Welcome <a style="text-transform: uppercase;" href="profile.php"><strong><?php echo $_SESSION['username']; ?></strong></a></a>
+						 <a style="color: white;">|</a><a href="index.php?logout='1'" style="color: #fe28a2;"> Logout</a>
 						 
 					<?php endif ?>
 				</li>

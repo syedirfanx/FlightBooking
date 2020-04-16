@@ -21,6 +21,7 @@
 <title>Find Flight | SNTL Airlines</title>
 <link rel="icon" href="img/icon.png">
 <link href="styles.css" type="text/css" rel="stylesheet" />
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <link rel="stylesheet" href="css/styles.css">
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -47,7 +48,7 @@
             <ul>
                 <li><a href="index.php">Home</a></li>
                 <li><a href="status.php">Flight Status</a></li>
-                <li><a href="reservation.html">Reservations</a></li>
+                <li><a href="reservation.php">Reservations</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
 				<li>
 				<?php  if (isset($_SESSION['username'])) : ?>
@@ -63,7 +64,9 @@
         <div id="menubar_space">
         
         </div>
+        <div id="login_space">
         
+        </div>
 
         
         <div class="search_result">
@@ -87,7 +90,6 @@
 </div>
 <script>
 function findFlights(){
-//Use AJAX to change page
 var divToChange = document.getElementById("toChange");
 var num = document.getElementById("flight_number");
 var day = document.getElementById("depart_date");

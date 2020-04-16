@@ -4,18 +4,14 @@
   if (!isset($_SESSION['username'])) {
   	$_SESSION['msg'] = "You must log in first";
   	header('location: login.php');
-	
   }
-  
   if (isset($_GET['logout'])) {
   	session_destroy();
   	unset($_SESSION['username']);
   	header("location: login.php");
   }
-  
- 
-  
 ?>
+
 <!DOCTYPE html>
 <html >
 <head>
@@ -35,7 +31,7 @@
             <ul>
                 <li><a href="index.php">Home</a></li>
                 <li><a href="status.php">Flight Status</a></li>
-                <li><a href="reservation.html">Reservations</a></li>
+                <li><a href="reservation.php">Reservations</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
 				<li>
 				<?php  if (isset($_SESSION['username'])) : ?>
@@ -62,7 +58,8 @@
         	<h3 id="booking_header">Profile</h3>
 			<a>USER ID: <strong><?php echo $_SESSION['id']; ?></strong></a><br>
 			<a>Name: <strong><?php echo $_SESSION['username']; ?></strong></a><br>
-			<a>Email: <strong><?php echo $_SESSION['email']; ?></strong></a><br>	
+			<a>Email: <strong><?php echo $_SESSION['email']; ?></strong></a><br>
+			
 		</div>
         
         </div>

@@ -60,5 +60,10 @@
 
 <br />
 
+### Flight Status
+<img src="img/showstats.PNG" border="1">
+
+<br />
+
 ### Book a Flight
 <img src="img/bookaflight.PNG" border="1">

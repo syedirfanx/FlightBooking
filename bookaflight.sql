@@ -46,3 +46,13 @@ INSERT INTO `flights` VALUES
 (23,'BG106','SAI','OIA','2020-04-22','08:45:00','2020-04-23','12:45:00','15h00m',2300,4),
 (24,'BG115','CBA','OIA','2020-04-22','10:30:00','2020-04-23','14:30:00','15h00m',2250,6),
 (25,'BG111','OIA','CBA','2020-04-22','10:00:00','2020-04-22','11:15:00','4h15m',1800,8);
+
+CREATE TABLE `reservation` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `totalCost` float DEFAULT NULL,
+  `tripType` varchar(50) DEFAULT NULL,
+  `depart_id` int(11) NOT NULL,
+  `return_id` int(11) NOT NULL,
+  `passengers` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;

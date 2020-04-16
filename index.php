@@ -11,6 +11,7 @@
   	header("location: login.php");
   }
 ?>
+
 <!DOCTYPE html>
 <html >
 <head>
@@ -19,7 +20,25 @@
 <title>Home | SNTL Airlines</title>
 <link rel="icon" href="img/icon.png">
 <link href="styles.css" type="text/css" rel="stylesheet" />
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <link rel="stylesheet" href="css/styles.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+	//DEPARTURE DATES RESRTRICTED TO TODAY AND FUTURE
+	var today = new Date();
+	
+	 $(function(){
+	        $("#return_date").datepicker({ dateFormat: 'yy-mm-dd', minDate: 0, maxDate: '2020-05-31', showButtonPanel: true, changeMonth: true, changeYear: true, showAnim: "slideDown" });
+	        $("#depart_date").datepicker({ dateFormat: 'yy-mm-dd', minDate: 0, maxDate: '2020-05-31', showButtonPanel: true, changeMonth: true, changeYear: true, showAnim: "slideDown" }).bind("change",function(){
+	            var minValue = $(this).val();
+	            minValue = $.datepicker.parseDate("yy-mm-dd", minValue);
+	            minValue.setDate(minValue.getDate());
+	            $("#return_date").datepicker( "option", "minDate", minValue );
+	        })
+	    });
+
+</script>
 </head>
 
 <body>
@@ -30,7 +49,7 @@
             <ul>
                 <li><a href="index.php">Home</a></li>
                 <li><a href="status.php">Flight Status</a></li>
-                <li><a href="reservation.html">Reservations</a></li>
+                <li><a href="reservation.php">Reservations</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
 				<li>
 					<?php  if (isset($_SESSION['username'])) : ?>
@@ -56,7 +75,7 @@
         <div class="quick_book">
         	<h3 id="booking_header">Book A Flight</h3>
         	
-    		<form method="post">
+    		<form action="flightSearch.php" method="post">
 	        	<div id="from_block">
 	        	FROM: <br/><select id="origin_drop" onchange="updateSelect(this,'destination_drop')" name="origin" required>
 	        			  <option value="" selected="selected"></option>
@@ -109,7 +128,7 @@
 						</select>
 	        	</div>
     
-        		<button id="search" >Find Flights</button>
+        		<button id="search"  onclick="getFlights()" type="submit" >Find Flights</button>
         		</form>
         		
         
@@ -121,6 +140,54 @@
 <div class="footer">
   <p>CSE311 | This website is made with &#128147; by Syed, Nafis, Tamanna & Lamia</p>
 </div>
+<script>
+
+	// always update whether or not the return date is viewed
+		var type = document.getElementById("trip_drop");
+    	var returnDate = document.getElementById("return_block");
+    	var returnElement = document.getElementById("return_date");
+    	
+    	if(type.value == "ROUND"){
+    		returnDate.style.visibility = 'visible';
+    		returnElement.required = true;
+    	}
+    	else if(type.value == "ONE"){
+    		returnDate.style.visibility = 'hidden';
+    		returnElement.required = false;
+    	}
+    	
+    	
+	
+
+    function updateSelect(changedSelect, selectId) {
+      var otherSelect = document.getElementById(selectId);
+      for (var i = 0; i < otherSelect.options.length; ++i) {
+        otherSelect.options[i].disabled = false;
+      }
+      if (changedSelect.selectedIndex == 0) {
+        return;
+      }
+      otherSelect.options[changedSelect.selectedIndex].disabled = true;
+    }
+    // end restriction
+    
+   function displayChange(){
+    	var type = document.getElementById("trip_drop");
+    	var returnDate = document.getElementById("return_block");
+    	var returnElement = document.getElementById("return_date");
+    	
+    	if(type.value == "ROUND"){
+    		returnDate.style.visibility = 'visible';
+    		returnElement.required = true;
+    	}
+    	else if(type.value == "ONE"){
+    		returnDate.style.visibility = 'hidden';
+    		returnElement.required = false;
+    		returnElement.value = '';
+    	}
+    }
+    
+ </script>
 </body>
 
 </html>

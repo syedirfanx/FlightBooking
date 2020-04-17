@@ -49,6 +49,7 @@ INSERT INTO `flights` VALUES
 
 CREATE TABLE `reservation` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `memberSeq` int(11) NOT NULL,
   `totalCost` float DEFAULT NULL,
   `tripType` varchar(50) DEFAULT NULL,
   `depart_id` int(11) NOT NULL,

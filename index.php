@@ -25,7 +25,7 @@
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script>
-	//DEPARTURE DATES RESRTRICTED TO TODAY AND FUTURE
+	
 	var today = new Date();
 	
 	 $(function(){
@@ -77,7 +77,7 @@
         	
     		<form action="flightSearch.php" method="post">
 	        	<div id="from_block">
-	        	FROM: <br/><select id="origin_drop" onchange="updateSelect(this,'destination_drop')" name="origin" required>
+	        	FROM: <br/><br/><select id="origin_drop" onchange="updateSelect(this,'destination_drop')" name="origin" required>
 	        			  <option value="" selected="selected"></option>
 						  <option value="Dhaka">Hazrat Shahjalal International Airport, Dhaka</option>
 						  <option value="Chattogram">Shah Amanat International Airport, Chattogram</option>
@@ -88,7 +88,7 @@
 				</div>
 				
 				<div id="to_block">
-	        	TO: <br/><select id="destination_drop" onchange="updateSelect(this,'origin_drop')" name="destination" required>
+	        	TO: <br/><br/><select id="destination_drop" onchange="updateSelect(this,'origin_drop')" name="destination" required>
 	        			  <option value="" selected="selected"></option>
 						  <option value="Dhaka">Hazrat Shahjalal International Airport, Dhaka</option>
 						  <option value="Chattogram">Shah Amanat International Airport, Chattogram</option>
@@ -97,17 +97,17 @@
 						  <option value="Rajshahi">Shah Makhdum Airport, Rajshahi</option>
 						</select>
 				</div>
-			
+			<br/>
 				<div id="depart_block">
-	        	Depart Date:<br/> <input id="depart_date" name="depart" type="text" placeholder="yyyy-mm-dd" required>
+	        	Depart Date:<br/><br/> <input id="depart_date" name="depart" type="text" placeholder="yyyy-mm-dd" required>
 	        	</div>
-	        	
+	        	<br/>
 	        	<div id="return_block">
-	        	Return Date:<br/> <input id="return_date" name="return" type="text" placeholder="yyyy-mm-dd" required> 	
+	        	Return Date:<br/><br/> <input id="return_date" name="return" type="text" placeholder="yyyy-mm-dd" required> 	
 	        	</div>
-	        	
+	        	<br/>
 	        	<div id="passenger_block">
-	        	Passengers:<br/> 
+	        	Passengers:<br/> <br/>
 	        			<select id="passenger_drop" name="passengernumber" required>
 	        			  <option value=""></option>
 						  <option value=1>1</option>
@@ -118,16 +118,16 @@
 						  <option value=6>6</option>
 						</select>
 	        	</div>
-	        	
+	        	<br/>
 	        	<div id="trip_block">
-	        	Type: <br/>
+	        	Type: <br/><br/>
 	        		<select id="trip_drop" name="trip_type" onchange="displayChange()" required>
 	        			  <option value=""></option>
 						  <option value="ROUND">Round Trip</option>
 						  <option value="ONE">One Way</option>
 						</select>
 	        	</div>
-    
+    <br/>
         		<button id="search"  onclick="getFlights()" type="submit" >Find Flights</button>
         		</form>
         		
@@ -142,7 +142,7 @@
 </div>
 <script>
 
-	// always update whether or not the return date is viewed
+
 		var type = document.getElementById("trip_drop");
     	var returnDate = document.getElementById("return_block");
     	var returnElement = document.getElementById("return_date");
@@ -169,7 +169,7 @@
       }
       otherSelect.options[changedSelect.selectedIndex].disabled = true;
     }
-    // end restriction
+  
     
    function displayChange(){
     	var type = document.getElementById("trip_drop");

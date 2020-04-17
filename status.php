@@ -64,9 +64,7 @@
         <div id="menubar_space">
         
         </div>
-        <div id="login_space">
-        
-        </div>
+      
 
         
         <div class="search_result">

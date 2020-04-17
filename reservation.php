@@ -50,11 +50,7 @@ session_start();
         
         </div>
         
-
-        
-        <div id="login_space">
-        
-        </div>		
+	
 			
 		<div class="search_result">
 			<h3 id="booking_header">Your Reservations</h3>
@@ -97,7 +93,7 @@ session_start();
 				var temp = JSON.stringify(array[i]);
 				var res_id = array[i]['memberSeq'];
 				str += "<tr><td>" + array[i]['memberSeq'] + "</td><td>" + array[i]['origin'] + 
-				"</td><td>" + array[i]['destination'] + "</td><td>$" + array[i]['totalCost'] + 
+				"</td><td>" + array[i]['destination'] + "</td><td>TK" + array[i]['totalCost'] + 
 				"</td><td>" + array[i]['passengers'] + "</td><td>" + array[i]['tripType'] +
 				"</td><td><button onclick='getDetails(" + res_id + ")' value='' class='nextButton' id='" + i + "'>Details</button></td>"
 				+ "</td><td><button onclick='deleteReservation(" + res_id + ")' value='' class='nextButton' id='" + i + "'>Cancel</button></td></tr>";
@@ -133,7 +129,7 @@ session_start();
 					"</td><td>" + array[i]['arrival_day'] + "</td><td>" + array[i]['arrival'] + "</td><td>" + array[i]['length'] + "</td></tr>";
 				}
 				str += "</table>";
-				buttonToAdd.innerHTML = "<a class='nextButton' type='button' href=\"reservation_login.php\">Close</a>"
+				buttonToAdd.innerHTML = "<a class='nextButton' type='button' href=\"reservation.php\">Close</a>"
 				if (array.length == 0){
 					divToChange.innerHTML = "Error showing detail!";
 				}
@@ -147,7 +143,7 @@ session_start();
 
 	
 	function deleteReservation(id){
-		if (confirm("There is a $200.00 change fee for canceling your flight.\n\nAre you sure you want to remove this reservation?") == true) {
+		if (confirm("There is a TK200.00 change fee for canceling your flight.\n\nAre you sure you want to remove this reservation?") == true) {
 		
 
 		anObj.open("GET", "deleteReservationController.php?id=" + id, true);
@@ -158,7 +154,7 @@ session_start();
 			
 			if (anObj.readyState == 4 && anObj.status == 200) {
 				alert("Reservation deleted successfully.");
-				document.location.href='reservation_login.php';
+				document.location.href='reservation.php';
 			}
 			else{
 				

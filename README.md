@@ -45,13 +45,18 @@
 
 <br />
 
+### User Registration Page
+<img src="img/register.PNG" border="1">
+
+<br />
+
 ### User Login Page
 <img src="img/login.PNG" border="1">
 
 <br />
 
-### User Registration Page
-<img src="img/register.PNG" border="1">
+### User Profile
+<img src="img/profile.PNG" border="1">
 
 <br />
 

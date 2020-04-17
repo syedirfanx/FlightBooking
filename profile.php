@@ -38,7 +38,7 @@
 						<a>Welcome <a style="text-transform: uppercase;"  href="profile.php"><strong><?php echo $_SESSION['username']; ?></strong></a></a>
 						 <a style="color: white;">|</a><a href="index.php?logout='1'" style="color: #fe28a2;"> Logout</a>
 						 
-					<?php endif ?>
+				<?php endif ?>
 				</li>
 				
             </ul>
@@ -56,8 +56,8 @@
        
         <div class="quick_book">
         	<h3 id="booking_header">Profile</h3>
-			<a>USER ID: <strong><?php echo $_SESSION['id']; ?></strong></a><br>
-			<a>Name: <strong><?php echo $_SESSION['username']; ?></strong></a><br>
+			
+			<a>Name: <strong><?php echo $_SESSION['username']; ?></strong></a><br><br>
 			<a>Email: <strong><?php echo $_SESSION['email']; ?></strong></a><br>
 			
 		</div>

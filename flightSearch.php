@@ -53,9 +53,6 @@ $type = $_POST["trip_type"];
         
         
         
-        <div id="login_space">
-        
-        </div>
         
         <div class="search_result">
         
@@ -69,7 +66,7 @@ $type = $_POST["trip_type"];
         	
         	<div id="nextButtonDiv">
 				
-        		<button onclick='goBack();' id='search' class='nextButton'>Back</button>
+        		<button onclick='goBack();' id='search' class='nextButton'>Back</button>|
 				
         		<button onclick='advancePageReturn();' id='search' class='nextButton'>Next</button>
         	</div>
@@ -123,7 +120,7 @@ if("<?=$type?>" == "ROUND"){
 				"</td><td>" + array[i]['destination'] + "</td><td>" + array[i]['depart_day'] + 
 				"</td><td>" + array[i]['depart'] + "</td><td>" + array[i]['arrival_day'] + 
 				"</td><td>" + array[i]['arrival'] + "</td><td>" + array[i]['length'] + 
-				"</td><td>$" + array[i]['price'] + "</td><td>" + array[i]['seats_available'] + 
+				"</td><td>TK" + array[i]['price'] + "</td><td>" + array[i]['seats_available'] + 
 				"</td><td><button onclick='pickDepartFlight(" + i + ")' value='" + temp + "' class='nextButton' id='" + i + "'>Select</button></td></tr>";
 			}
 			str += "</table>";
@@ -160,7 +157,7 @@ else if("<?=$type?>" == "ONE"){
 				"</td><td>" + array[i]['destination'] + "</td><td>" + array[i]['depart_day'] + 
 				"</td><td>" + array[i]['depart'] + "</td><td>" + array[i]['arrival_day'] + 
 				"</td><td>" + array[i]['arrival'] + "</td><td>" + array[i]['length'] + 
-				"</td><td>$" + array[i]['price'] + "</td><td>" + array[i]['seats_available'] + 
+				"</td><td>TK" + array[i]['price'] + "</td><td>" + array[i]['seats_available'] + 
 				"</td><td><button onclick='pickDepartFlight(" + i + ")' value='" + temp + "' class='nextButton' id='" + i + "'>Select</button></td></tr>";
 			}
 			str += "</table>";
@@ -179,7 +176,7 @@ else if("<?=$type?>" == "ONE"){
 function pickDepartFlight(num){
 	var element = document.getElementById(num);
 	var myArr = JSON.parse(element.value);
-	var string = "You have selected: " + myArr.flight_number + " from " + myArr.origin + " to " + myArr.destination + " for $" +
+	var string = "You have selected: " + myArr.flight_number + " from " + myArr.origin + " to " + myArr.destination + " for TK" +
 	myArr.price + "<br/><br/>Click next to continue with your purchase.";
 			changeSelected.innerHTML = string;
 
@@ -190,7 +187,7 @@ function pickDepartFlight(num){
 function pickReturnFlight(num){
 	var element = document.getElementById(num);
 	var myArr = JSON.parse(element.value);
-	var string = "You have selected: " + myArr.flight_number + " from " + myArr.origin + " to " + myArr.destination + " for $" +
+	var string = "You have selected: " + myArr.flight_number + " from " + myArr.origin + " to " + myArr.destination + " for TK" +
 	myArr.price + "<br/><br/>Click next to continue with your purchase.";
 			changeSelected.innerHTML = string;
 
@@ -240,7 +237,7 @@ function advancePageReturn(){
 						"</td><td>" + array[i]['destination'] + "</td><td>" + array[i]['depart_day'] + 
 						"</td><td>" + array[i]['depart'] + "</td><td>" + array[i]['arrival_day'] + 
 						"</td><td>" + array[i]['arrival'] + "</td><td>" + array[i]['length'] + 
-						"</td><td>$" + array[i]['price'] + "</td><td>" + array[i]['seats_available'] + 
+						"</td><td>TK" + array[i]['price'] + "</td><td>" + array[i]['seats_available'] + 
 						"</td><td><button onclick='pickReturnFlight(" + i + ")' value='" + temp + "' class='nextButton' id='" + i + "'>Select</button></td></tr>";
 					}
 					str += "</table>";
@@ -279,7 +276,7 @@ function advancePageReturn(){
 						"</td><td>" + array[i]['destination'] + "</td><td>" + array[i]['depart_day'] + 
 						"</td><td>" + array[i]['depart'] + "</td><td>" + array[i]['arrival_day'] + 
 						"</td><td>" + array[i]['arrival'] + "</td><td>" + array[i]['length'] + 
-						"</td><td>$" + array[i]['price'] + "</td><td>" + array[i]['seats_available'] + 
+						"</td><td>TK" + array[i]['price'] + "</td><td>" + array[i]['seats_available'] + 
 						"</td><td><button onclick='toShoppingCart(" + i + ")' value='" + temp + "' class='nextButton' id='" + i + "'>Select</button></td></tr>";
 					}
 					str += "</table>";
@@ -331,7 +328,7 @@ function toShoppingCart(){
 					"</td><td>" + array[i]['origin'] + "</td><td>" + array[i]['destination'] + "</td><td>" + array[i]['depart_day'] + 
 					"</td><td>" + array[i]['depart'] + "</td><td>" + array[i]['arrival_day'] + 
 					"</td><td>" + array[i]['arrival'] + "</td><td>" + array[i]['length'] + 
-					"</td><td>$" + array[i]['price'] + "</td></tr>";
+					"</td><td>TK" + array[i]['price'] + "</td></tr>";
 					totalPrice = totalPrice + parseFloat(array[i]['price']);
 				}
 				search_head.innerHTML = "Please review your selected flights!";
@@ -341,7 +338,7 @@ function toShoppingCart(){
 				priceStr = totalPrice.toString();
 				finalStr = finalPrice.toString();
 				divToChange.innerHTML = str;
-				changeSelected.innerHTML = "Total Cost: <b>$" + priceStr + " x <?=$passengers?> = $" + finalStr + "</b>";
+				changeSelected.innerHTML = "Total Cost: <b>TK" + priceStr + " x <?=$passengers?> = TK" + finalStr + "</b>";
 				changeSelected.style.textAlign = "right";
 				changeSelected.style.fontSize = "19px";
 			}
@@ -413,7 +410,7 @@ function goBack(){
 					"</td><td>" + array[i]['destination'] + "</td><td>" + array[i]['depart_day'] + 
 					"</td><td>" + array[i]['depart'] + "</td><td>" + array[i]['arrival_day'] + 
 					"</td><td>" + array[i]['arrival'] + "</td><td>" + array[i]['length'] + 
-					"</td><td>$" + array[i]['price'] + "</td><td>" + array[i]['seats_available'] + 
+					"</td><td>TK" + array[i]['price'] + "</td><td>" + array[i]['seats_available'] + 
 					"</td><td><button onclick='pickFlight(" + i + ")' value='" + temp + "' class='nextButton' id='" + i + "'>Select</button></td></tr>";
 				}
 				str += "</table>";

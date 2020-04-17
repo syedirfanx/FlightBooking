@@ -61,7 +61,7 @@ class DatabaseAdaptor {
 
 	public function getReservations($id) {
 		$stmt = $this->DB->prepare ("SELECT reservation.memberSeq, flights.origin, flights.destination, reservation.totalCost, reservation.passengers,
-	 reservation.tripType FROM reservation JOIN flights ON reservation.depart_id = flights.flight_id WHERE reservation.id = :id");
+	 reservation.tripType FROM reservation JOIN flights ON reservation.depart_id = flights.flight_id WHERE reservation.memberSeq = :id");
 		$stmt->bindParam('id', $id);
 		$stmt->execute ();
 		return $stmt->fetchAll ( PDO::FETCH_ASSOC );

@@ -129,7 +129,7 @@ session_start();
 					"</td><td>" + array[i]['arrival_day'] + "</td><td>" + array[i]['arrival'] + "</td><td>" + array[i]['length'] + "</td></tr>";
 				}
 				str += "</table>";
-				buttonToAdd.innerHTML = "<a class='nextButton' type='button' href=\"reservation.php\">Close</a>"
+				
 				if (array.length == 0){
 					divToChange.innerHTML = "Error showing detail!";
 				}

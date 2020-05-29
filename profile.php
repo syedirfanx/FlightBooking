@@ -56,7 +56,6 @@
        
         <div class="quick_book">
         	<h3 id="booking_header">Profile</h3>
-			
 			<a>Name: <strong><?php echo $_SESSION['username']; ?></strong></a><br><br>
 			<a>Email: <strong><?php echo $_SESSION['email']; ?></strong></a><br>
 			

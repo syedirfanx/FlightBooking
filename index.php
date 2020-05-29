@@ -29,8 +29,8 @@
 	var today = new Date();
 	
 	 $(function(){
-	        $("#return_date").datepicker({ dateFormat: 'yy-mm-dd', minDate: 0, maxDate: '2020-05-31', showButtonPanel: true, changeMonth: true, changeYear: true, showAnim: "slideDown" });
-	        $("#depart_date").datepicker({ dateFormat: 'yy-mm-dd', minDate: 0, maxDate: '2020-05-31', showButtonPanel: true, changeMonth: true, changeYear: true, showAnim: "slideDown" }).bind("change",function(){
+	        $("#return_date").datepicker({ dateFormat: 'yy-mm-dd', minDate: 0, maxDate: '2020-06-30', showButtonPanel: true, changeMonth: true, changeYear: true, showAnim: "slideDown" });
+	        $("#depart_date").datepicker({ dateFormat: 'yy-mm-dd', minDate: 0, maxDate: '2020-06-30', showButtonPanel: true, changeMonth: true, changeYear: true, showAnim: "slideDown" }).bind("change",function(){
 	            var minValue = $(this).val();
 	            minValue = $.datepicker.parseDate("yy-mm-dd", minValue);
 	            minValue.setDate(minValue.getDate());
@@ -128,7 +128,7 @@
 						</select>
 	        	</div>
     <br/>
-        		<button id="search"  onclick="getFlights()" type="submit" >Find Flights</button>
+        		<button id="search" type="submit" >Find Flights</button>
         		</form>
         		
         

@@ -8,8 +8,7 @@
   </tr>
 </table>
 
-
-
+## Features
 <table>
   <tr>
     <td> 1 </td>
@@ -38,7 +37,7 @@
   
 </table>
 
-## Features
+
 
 ### Navigation Bar
 <img src="img/navbar.png" border="1">

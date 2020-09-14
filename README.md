@@ -1,5 +1,6 @@
 # Online Flight Booking - SNTL Airways
-
+### CSE 311 Database Systems (Spring 2020)
+#### A simple website for booking flight online with the features described bellow. 
 <table>
   <tr>
     <td> Language Uses </td>
@@ -9,7 +10,6 @@
 
 
 
-#### A simple website for booking flight online with the features described bellow. 
 <table>
   <tr>
     <td> 1 </td>
